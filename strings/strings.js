@@ -58,6 +58,7 @@ let concat3 = "father!"
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
 let concatStrings = concat1 + concat2 + concat3
+concatStrings = concat1.concat(concat2,concat3) // correction
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -228,6 +229,7 @@ let removeMe = "We will going to be leaving at noon sharp."
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
 let removedString = removeMe.slice(0,7) + removeMe.slice(16)
+removedString = removeMe.replace("going to ", "") // Correction, much faster.
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -248,6 +250,7 @@ let targetString1 = "THE-QUICK-BROWN-FOX-JUMPS-OVER-THE-LAZY-DOG"
 
 testString1 = testString1.replace("The quick brown fox jumps over the lazy dog", "THE-QUICK-BROWN-FOX-JUMPS-OVER-THE-LAZY-DOG")
 
+testString1 = testString1.toUpperCase().replace(/ /g, "-") // Correction
 ////////////////////////////////////////////////////////////////////////
 
 
