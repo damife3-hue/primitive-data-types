@@ -6,7 +6,7 @@
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-newBoolean = None
+newBoolean = False
 
 ########################################################################
 
@@ -27,7 +27,7 @@ scoreToPass = 75
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-studentPasses = None
+studentPasses = examScore1 >= scoreToPass or examScore2 >= scoreToPass
 
 ########################################################################
 
@@ -57,11 +57,12 @@ student2Wood = random.randint(3, 5)
 student2Chuck = random.randint(4, 6)
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
-
-numberOfWood = None
-numberOfChuck = None
-
-bothAtLeastOneCorrect = None
+tongueTwiser = tongueTwiser.replace(",", " ").replace("?"," ").replace("."," ") #the comma's and fullstop were getting in the way
+numberOfWood = tongueTwiser.split().count("wood")
+numberOfChuck = tongueTwiser.split().count("chuck")
+#print(student1Wood == numberOfWood or student1Chuck == numberOfChuck) did this to debug
+#print(student2Wood == numberOfWood or student1Chuck == numberOfChuck) did this to debug
+bothAtLeastOneCorrect = (student1Wood == numberOfWood or student1Chuck == numberOfChuck) and (student2Wood == numberOfWood or student2Chuck == numberOfChuck)
 
 ########################################################################
 
@@ -77,18 +78,18 @@ bothAtLeastOneCorrect = None
 #  the bool() conversion function, which will look at the non-boolean
 #  data types and return their inherent boolean value
 #
-falsy1 = falsy2 = falsy3 = None
-truthy1 = truthy2 = None
+falsy1 = falsy2 = falsy3 = False
+truthy1 = truthy2 = True
 # Uncomment the lines below to see what they evaluate to
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-# falsy1 = bool("")
-# falsy2 = bool(0)
-# falsy3 = bool(None)
+falsy1 = bool("")
+falsy2 = bool(0)
+falsy3 = bool(None)
 
-# truthy1 = bool("non-empty string")
-# truthy2 = bool(1)
+truthy1 = bool("non-empty string")
+truthy2 = bool(1)
 
 ########################################################################
 
