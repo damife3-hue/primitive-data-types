@@ -6,7 +6,7 @@
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let newBoolean
+let newBoolean = true
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -25,9 +25,9 @@ let dadsHeight = generateRandomNumber(100, 200)
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let momIsTaller
-let dadIsTaller
-let areTheSameHeight
+let momIsTaller = momsHeight > dadsHeight
+let dadIsTaller = dadsHeight > momsHeight
+let areTheSameHeight = dadsHeight === momsHeight
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -46,7 +46,7 @@ let studentEssay = generateSudentEssay()
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let notPlagiarised
+let notPlagiarised = !studentEssay.includes(keyPhrase)
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -68,10 +68,10 @@ let thresholdForTall = 150
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let siblingsAreTall
-let siblingsAreShort
-let atLeastOneIsTall
-let onlyOneIsTall
+let siblingsAreTall = sistersHeight > thresholdForTall && brothersHeight > thresholdForTall
+let siblingsAreShort = sistersHeight < thresholdForTall && brothersHeight < thresholdForTall
+let atLeastOneIsTall = sistersHeight > thresholdForTall || brothersHeight > thresholdForTall
+let onlyOneIsTall = (sistersHeight > thresholdForTall && brothersHeight < thresholdForTall) || (brothersHeight > thresholdForTall && sistersHeight < thresholdForTall)
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -94,7 +94,7 @@ let secretCode = generateSecretCode()
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let codeIsValid
+let codeIsValid = (secretCode.charAt(4) === secretCode.charAt(4).toUpperCase()) && Number.isInteger(Number(secretCode.charAt(9))) && secretCode.length === 15 //needed to convert the string at charAt(9) into a number
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -109,19 +109,19 @@ let codeIsValid
 //  little bizarre so have a look at the following conversions using
 //  the Boolean() conversion function, which will look at the non-boolean
 //  data types and return their inherent boolean value
-let falsy1, falsy2, falsy3, falsy4, falsy5
-let truthy1, truthy2
+let falsy1, falsy2, falsy3, falsy4, falsy5 = false
+let truthy1, truthy2 = true
 //  Uncomment the lines below to see what they evaluate to
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-// falsy1 = Boolean("")
-// falsy2 = Boolean(0)
-// falsy3 = Boolean(undefined)
-// falsy4 = Boolean(null)
+falsy1 = Boolean("")
+falsy2 = Boolean(0)
+falsy3 = Boolean(undefined)
+falsy4 = Boolean(null)
 
-// truthy1 = Boolean("non-empty string")
-// truthy2 = Boolean(1)
+truthy1 = Boolean("non-empty string")
+truthy2 = Boolean(1)
 
 ////////////////////////////////////////////////////////////////////////
 
