@@ -78,8 +78,8 @@ bothAtLeastOneCorrect = (student1Wood == numberOfWood or student1Chuck == number
 #  the bool() conversion function, which will look at the non-boolean
 #  data types and return their inherent boolean value
 #
-falsy1 = falsy2 = falsy3 = False
-truthy1 = truthy2 = True
+falsy1 = falsy2 = falsy3 = None
+truthy1 = truthy2 = None
 # Uncomment the lines below to see what they evaluate to
 #
 ###################### YOUR CODE BELOW THIS LINE #######################

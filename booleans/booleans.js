@@ -72,7 +72,7 @@ let siblingsAreTall = sistersHeight > thresholdForTall && brothersHeight > thres
 let siblingsAreShort = sistersHeight < thresholdForTall && brothersHeight < thresholdForTall
 let atLeastOneIsTall = sistersHeight > thresholdForTall || brothersHeight > thresholdForTall
 let onlyOneIsTall = (sistersHeight > thresholdForTall && brothersHeight < thresholdForTall) || (brothersHeight > thresholdForTall && sistersHeight < thresholdForTall)
-
+// correction: let onlyOneIsTall = !siblingsAreTall && !siblingsAreShort (this is much faster)
 ////////////////////////////////////////////////////////////////////////
 
 
@@ -109,8 +109,8 @@ let codeIsValid = (secretCode.charAt(4) === secretCode.charAt(4).toUpperCase()) 
 //  little bizarre so have a look at the following conversions using
 //  the Boolean() conversion function, which will look at the non-boolean
 //  data types and return their inherent boolean value
-let falsy1, falsy2, falsy3, falsy4, falsy5 = false
-let truthy1, truthy2 = true
+let falsy1, falsy2, falsy3, falsy4, falsy5
+let truthy1, truthy2
 //  Uncomment the lines below to see what they evaluate to
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
